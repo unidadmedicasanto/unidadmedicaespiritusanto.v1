@@ -58,7 +58,7 @@
     // Project carousel
     $(".project-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 2000,
         margin: 25,
         loop: true,
         nav: false,
@@ -84,7 +84,7 @@
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
-        smartSpeed: 1000,
+        smartSpeed: 2000,
         margin: 25,
         loop: true,
         center: true,
