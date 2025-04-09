@@ -1,15 +1,16 @@
 <?php
 // Conexion a la base de datos
-$host = "localhost";
-$user = "root";
-$password = "root"; // Asegúrate de que sea la correcta
-$database = "db_espiritu_santo";
+$host = "sql209.infinityfree.com";
+$dbname = "if0_38712495_XXX";
+$username = "if0_38712495";
+$password = "yWxrBSxigSs8";
 
-$conn = new mysqli($host, $user, $password, $database, 3306);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $conn->exec("SET NAMES utf8mb4");
+} catch(PDOException $e) {
+    echo "Error de conexión: " . $e->getMessage();
 }
 
 
